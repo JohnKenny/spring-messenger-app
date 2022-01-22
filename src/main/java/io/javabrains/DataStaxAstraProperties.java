@@ -3,18 +3,20 @@ package io.javabrains;
 import java.io.File;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 @ConfigurationProperties(prefix = "datastax.astra")
+@Configuration
 public class DataStaxAstraProperties {
 
-    private File secureConnectBunde;
+    private File secureConnectBundle;
 
-    public File getSecureConnectBunde() {
-        return secureConnectBunde;
+    public File getSecureConnectBundle() {
+        return secureConnectBundle;
     }
 
-    public void setSecureConnectBunde(File secureConnectBunde) {
-        this.secureConnectBunde = secureConnectBunde;
+    public void setSecureConnectBundle(File secureConnectBundle) {
+        this.secureConnectBundle = secureConnectBundle;
     }
 
     

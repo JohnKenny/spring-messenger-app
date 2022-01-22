@@ -24,14 +24,14 @@ public class InboxApp {
 	// 	System.out.println(principal);
 	// 	return principal.getAttribute("name");
 	// }
-	
+	 
 	
 	// Used to connect to the database with the Astra secure bundle
 	@Bean
-	public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties){
-		Path bundle = astraProperties.getSecureConnectBunde().toPath();
-		return builder -> builder.withCloudSecureConnectBundle(bundle);
-
-	}
+    public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
+        Path bundle = astraProperties.getSecureConnectBundle().toPath();
+        return builder -> builder.withCloudSecureConnectBundle(bundle);
+    }
 
 }
+ 
