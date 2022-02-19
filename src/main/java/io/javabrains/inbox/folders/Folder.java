@@ -11,7 +11,7 @@ public class Folder {
 
     
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
-    private String userId;
+    private int id;
 
     @PrimaryKeyColumn(name = "label", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private String label;
@@ -19,12 +19,25 @@ public class Folder {
     @CassandraType(type = Name.TEXT)
     private String color;
 
-    public String getUserId() {
-        return userId;
+    
+
+    public Folder() {}
+
+    
+    public Folder(int userId, String label, String color) {
+        this.id = userId;
+        this.label = label;
+        this.color = color;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int userId) {
+        this.id = userId;
     }
 
     public String getLabel() {
